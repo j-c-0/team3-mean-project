@@ -17,7 +17,8 @@ import { RatingStarsComponent } from './rating-stars/rating-stars.component';
 import { DetailsPageComponent } from './details-page/details-page.component';
 import { LocationDetailsComponent } from './location-details/location-details.component';
 import { MostRecentFirstPipe } from './most-recent-first.pipe';
-
+import { SearchComponent } from './search/search.component';
+import { FilterPipe } from './filter.pipe'
 @NgModule({
   declarations: [
     FrameworkComponent,
@@ -31,7 +32,9 @@ import { MostRecentFirstPipe } from './most-recent-first.pipe';
     RatingStarsComponent,
     DetailsPageComponent,
     LocationDetailsComponent,
-    MostRecentFirstPipe
+    MostRecentFirstPipe,
+    SearchComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

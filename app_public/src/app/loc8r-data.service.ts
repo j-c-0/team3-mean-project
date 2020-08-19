@@ -23,6 +23,15 @@ export class Loc8rDataService {
       .then(response => response as Location[])
       .catch(this.handleError);
   }
+  public searchLocation(searchstring: string) : Promise<Location[]> {
+    
+    const url: string = `${this.apiBaseUrl}/locations?name=${searchstring}`;
+    return this.http
+      .get(url)
+      .toPromise()
+      .then(response => response as Location[])
+      .catch(this.handleError);
+  }
 
   public getLocationById (locationId: string) : Promise<Location> {
     const url: string = `${this.apiBaseUrl}/locations/${locationId}`;
