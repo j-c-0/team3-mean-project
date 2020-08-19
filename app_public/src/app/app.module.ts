@@ -43,7 +43,10 @@ import { FilterPipe } from './filter.pipe'
     ReactiveFormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    HomeListComponent,
+    FilterPipe
+  ],
   bootstrap: [FrameworkComponent]
 })
 export class AppModule { }

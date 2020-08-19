@@ -8,7 +8,10 @@ import { HomeListComponent} from '../home-list/home-list.component'
     styleUrls: ['./search.component.css'],
 })
 export class SearchComponent implements OnInit {
-  constructor(private filterPipe: FilterPipe) {
+  constructor(
+    private filterPipe: FilterPipe,
+    private homeListComponent:HomeListComponent
+    ) {
     
    }
 
