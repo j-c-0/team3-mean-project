@@ -1,31 +1,39 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import {Location} from './location'
 @Pipe({
-  name: 'filter'
-  
+  name: 'filter',
+  pure: false
 })
 export class FilterPipe implements PipeTransform {
-  // transform(item: any[], searchText: string): any[] {
+  // transform(locations: Location[], searchText: string): any[] {
 
-  //   if (!item) {
-  //     return [];
-  //   }
-  //   if (!searchText) {
-  //     return item;
-  //   }
+    // if (!locations) {
+    //   return [];
+    // }
+    // if (!searchText) {
+    //   return locations;
+    // }
   //   searchText = searchText.toLocaleLowerCase();
 
-  //   return item.filter(it => {
-  //     return it.toLocaleLowerCase().includes(searchText);
+  //   return locations.filter(location => {
+  //     console.log(location)
+
+  //     return location.name.toLocaleLowerCase().includes(searchText);
+
   //   });
   // }
-    transform(value: any[], searchText: string): any[] {
+    transform(locations: Location[], searchText: string): Location[] {
+      console.log(locations)
+            
+      searchText = searchText.toLocaleLowerCase();
+      console.log(searchText)
 
-    return value.filter(item => {
-      item.name.startsWith('r');
-      console.log(item.name);
-      console.log(searchText);
+      return locations.filter(location => {
+        location.name.startsWith('*');
+        console.log(location.name.toLocaleLowerCase().includes(searchText));
+        console.log(location.name);
+        // console.log(searchText);
       
-    });
+      });
   }
 }
