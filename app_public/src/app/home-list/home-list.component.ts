@@ -22,9 +22,9 @@ export class HomeListComponent implements OnInit {
   public locations: Location[];
 
   public searchText: string;
-
+ 
   public message: string;
-
+  
   private getLocations(position: any): void {
     this.message = 'Searching for nearby places';
     const lat: number = position.coords.latitude;

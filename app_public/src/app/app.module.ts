@@ -17,7 +17,8 @@ import { RatingStarsComponent } from './rating-stars/rating-stars.component';
 import { DetailsPageComponent } from './details-page/details-page.component';
 import { LocationDetailsComponent } from './location-details/location-details.component';
 import { MostRecentFirstPipe } from './most-recent-first.pipe';
-import { FilterPipe } from './filter.pipe'
+import { FilterPipe } from './filter.pipe';
+import { WeatherComponent } from './weather/weather.component'
 @NgModule({
   declarations: [
     FrameworkComponent,
@@ -32,7 +33,8 @@ import { FilterPipe } from './filter.pipe'
     DetailsPageComponent,
     LocationDetailsComponent,
     MostRecentFirstPipe,
-    FilterPipe
+    FilterPipe,
+    WeatherComponent
   ],
   imports: [
     BrowserModule,
