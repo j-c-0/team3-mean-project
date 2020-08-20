@@ -5,18 +5,27 @@ import {Location} from './location'
   
 })
 export class FilterPipe implements PipeTransform {
-  transform(location: any[], searchText: string): any[] {
+  // transform(item: any[], searchText: string): any[] {
 
-    if (!location) {
-      return [];
-    }
-    if (!searchText) {
-      return location;
-    }
-    searchText = searchText.toLocaleLowerCase();
+  //   if (!item) {
+  //     return [];
+  //   }
+  //   if (!searchText) {
+  //     return item;
+  //   }
+  //   searchText = searchText.toLocaleLowerCase();
 
-    return location.filter(it => {
-      return it.toLocaleLowerCase().includes(searchText);
+  //   return item.filter(it => {
+  //     return it.toLocaleLowerCase().includes(searchText);
+  //   });
+  // }
+    transform(value: any[], searchText: string): any[] {
+
+    return value.filter(item => {
+      item.name.startsWith('r');
+      console.log(item.name);
+      console.log(searchText);
+      
     });
   }
 }

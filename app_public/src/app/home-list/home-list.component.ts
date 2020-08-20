@@ -15,7 +15,6 @@ export class HomeListComponent implements OnInit {
   constructor(
     private loc8rDataService: Loc8rDataService,
     private geolocationService: GeolocationService,
-    private filterPipe: FilterPipe
   ) { }
 
   public locations: Location[];

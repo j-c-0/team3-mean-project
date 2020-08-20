@@ -16,7 +16,7 @@ export class SearchComponent implements OnInit {
    }
 
   public locations: Location[];
-   searchText: string;
+  public searchText: string;
   ngOnInit(): void {
     
   }
