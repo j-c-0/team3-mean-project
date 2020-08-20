@@ -5,35 +5,35 @@ import {Location} from './location'
   pure: false
 })
 export class FilterPipe implements PipeTransform {
-  // transform(locations: Location[], searchText: string): any[] {
+  transform(items: Location[], searchText: string): any[] {
 
-    // if (!locations) {
-    //   return [];
-    // }
-    // if (!searchText) {
-    //   return locations;
-    // }
-  //   searchText = searchText.toLocaleLowerCase();
-
-  //   return locations.filter(location => {
-  //     console.log(location)
-
-  //     return location.name.toLocaleLowerCase().includes(searchText);
-
-  //   });
-  // }
-    transform(locations: Location[], searchText: string): Location[] {
-      console.log(locations)
-            
-      searchText = searchText.toLocaleLowerCase();
-      console.log(searchText)
-
-      return locations.filter(location => {
-        location.name.startsWith('*');
-        console.log(location.name.toLocaleLowerCase().includes(searchText));
-        console.log(location.name);
-        // console.log(searchText);
-      
-      });
+    if (!items) {
+      return [];
+    }
+    if (!searchText) {
+      return items;
+    }
+  
+    return items.filter(it => {
+      return it.name.includes(searchText)
+    });
   }
+  // function wordIsContained(element, index, array){
+    
+  // }
+
+  //   transform(locations: Location[], searchText: string): Location[] {
+  //     console.log(locations)
+            
+  //     searchText = searchText;
+  //     console.log(searchText)
+
+  //     return locations.filter(location => {
+  //       location.name.startsWith('*');
+  //       console.log(location.name.includes(searchText));
+  //       console.log(location.name);
+  //       // console.log(searchText);
+      
+  //     });
+  // }
 }
