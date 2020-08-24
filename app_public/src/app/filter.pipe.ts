@@ -2,38 +2,19 @@ import { Pipe, PipeTransform } from '@angular/core';
 import {Location} from './location'
 @Pipe({
   name: 'filter',
-  pure: false
 })
 export class FilterPipe implements PipeTransform {
-  transform(items: Location[], searchText: string): any[] {
-
-    if (!items) {
+  transform(locations: Location[], searchText: string): Location[] {
+    
+    if (!locations) {
       return [];
     }
     if (!searchText) {
-      return items;
+      return locations;
     }
   
-    return items.filter(it => {
-      return it.name.includes(searchText)
+    return locations.filter(location => {
+      return location.name.toLocaleLowerCase().includes(searchText.toLocaleLowerCase())
     });
   }
-  // function wordIsContained(element, index, array){
-    
-  // }
-
-  //   transform(locations: Location[], searchText: string): Location[] {
-  //     console.log(locations)
-            
-  //     searchText = searchText;
-  //     console.log(searchText)
-
-  //     return locations.filter(location => {
-  //       location.name.startsWith('*');
-  //       console.log(location.name.includes(searchText));
-  //       console.log(location.name);
-  //       // console.log(searchText);
-      
-  //     });
-  // }
-}
+} 

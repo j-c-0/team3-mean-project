@@ -43,10 +43,7 @@ import { WeatherComponent } from './weather/weather.component'
     ReactiveFormsModule,
     AppRoutingModule
   ],
-  providers: [
-    HomeListComponent,
-    FilterPipe
-  ],
+  providers: [],
   bootstrap: [FrameworkComponent]
 })
 export class AppModule { }
