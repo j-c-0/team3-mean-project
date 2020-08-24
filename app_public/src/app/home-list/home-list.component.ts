@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Loc8rDataService } from "../loc8r-data.service";
 import { GeolocationService } from "../geolocation.service";
+import { FilterPipe } from '../filter.pipe';
 
 import { Location } from '../location';
 
@@ -14,12 +15,16 @@ export class HomeListComponent implements OnInit {
   constructor(
     private loc8rDataService: Loc8rDataService,
     private geolocationService: GeolocationService
-  ) { }
+  ) { 
+    
+  }
 
   public locations: Location[];
 
+  public searchText: string;
+ 
   public message: string;
-
+  
   private getLocations(position: any): void {
     this.message = 'Searching for nearby places';
     const lat: number = position.coords.latitude;

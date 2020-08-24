@@ -13,10 +13,18 @@ export class Loc8rDataService {
   //private apiBaseUrl = 'http://localhost:3000/api';
   private apiBaseUrl = environment.apiBaseUrl;
   public getLocations(lng: number, lat: number) : Promise<Location[]> {
-    // const lng: number = -0.7992599;
-    // const lat: number = 51.378091;
-    const maxDistance: number = 1000;
+
+    const maxDistance: number = 2000;
     const url: string = `${this.apiBaseUrl}/locations?lng=${lng}&lat=${lat}&maxDistance=${maxDistance}`;
+    return this.http
+      .get(url)
+      .toPromise()
+      .then(response => response as Location[])
+      .catch(this.handleError);
+  }
+  public searchLocation(searchstring: string) : Promise<Location[]> {
+    
+    const url: string = `${this.apiBaseUrl}/locations?name=${searchstring}`;
     return this.http
       .get(url)
       .toPromise()

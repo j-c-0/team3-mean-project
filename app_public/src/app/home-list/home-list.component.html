@@ -1,5 +1,9 @@
+
+<div class="md-form">
+    <input type="search" [(ngModel)]="searchText" placeholder="Search text">
+  </div>
 <div class="error">{{message}}</div>
-<div class="card" *ngFor="let location of locations">
+<div class="card" *ngFor="let location of (locations | filter:searchText)">
     <div class="card-block">
         <h4>
             <a routerLink="/location/{{location._id}}">{{location.name}}</a>
