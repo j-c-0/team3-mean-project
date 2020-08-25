@@ -20,6 +20,8 @@ import { MostRecentFirstPipe } from './most-recent-first.pipe';
 import { FilterPipe } from './filter.pipe';
 import { WeatherComponent } from './weather/weather.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { MaterialModule } from './material/material.module';
+
 @NgModule({
   declarations: [
     FrameworkComponent,
@@ -43,7 +45,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     FormsModule, 
     ReactiveFormsModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [FrameworkComponent]
