@@ -1,15 +1,15 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
     <div class="navbar-brand">
-      <a routerLink="">
+      <a routerLink="" mat-focus-indicator mat-button>
         <img src="../../assets/logo/Loc8r.png" alt="Loc8r logo">
       </a>
     </div>
-    <div id="navbarMain" class="navbar-collapse collapse">
-      <span class="nav-item">
-          <a routerLink="about" routerLinkActive="active" class="nav-link">About</a>
-      </span>
-    </div>
+
+      <a routerLink="about" routerLinkActive="active" mat-focus-indicator mat-flat-button mat-button color="primary">
+        <span class="mat-button-wrapper">About</span>
+      </a>
+
     <span class="nav-spacer"></span>
     <button mat-icon-button class="example-icon" aria-label="icon-button with menu icon">
       <mat-icon>menu</mat-icon>
@@ -19,9 +19,6 @@
 
 
   <div class="container content">
-    <br/>
-    <br/>
-    <br/> 
     <router-outlet></router-outlet>
     <footer>
       <div class="row">

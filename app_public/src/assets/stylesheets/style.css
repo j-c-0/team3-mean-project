@@ -9,11 +9,6 @@ legend {
   font-family: 'Lobster', cursive;
 }
 
-/* .navbar {
-  background-color: #ad1d28;
-  border-color: #911821;
-} */
-
 .nav-spacer {
   flex: 1 1 auto;
 }
@@ -60,6 +55,12 @@ mat-chip {
   padding-bottom: 0.5em;
 }
 
+.center{
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
 .review-header {
   background-color: #31727a;
   padding-top: 0.5em;
@@ -104,9 +105,3 @@ a {
 a:hover {
   color:#fff
 }
-
-/* body {
-  font-family: "Cabin", Arial, sans-serif;
-  color: #fff;
-  background-color: #108a93;
-} */
