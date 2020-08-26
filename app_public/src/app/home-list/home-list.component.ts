@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Loc8rDataService } from "../loc8r-data.service";
 import { GeolocationService } from "../geolocation.service";
-
+import {YoutubeService} from '../youtube.service';
 import { Location } from '../location';
 
 @Component({
@@ -13,12 +13,16 @@ export class HomeListComponent implements OnInit {
 
   constructor(
     private loc8rDataService: Loc8rDataService,
-    private geolocationService: GeolocationService
+    private geolocationService: GeolocationService,
+    private youtube:YoutubeService 
   ) { }
 
   public locations: Location[];
 
   public message: string;
+
+  channels:any;
+  @ViewChild('channelName')ChannelName:ElementRef;
 
   private getLocations(position: any): void {
     this.message = 'Searching for nearby places';
@@ -50,6 +54,18 @@ export class HomeListComponent implements OnInit {
   };
   
   ngOnInit(): void {
+    this.youtube.getChannels("Programming").subscribe((data)=>{
+      console.log(data)
+      this.channels =data.items;
+    })
     this.getPosition();
+  }
+  getData(){
+    var channelName=this.ChannelName.nativeElement.value;
+
+    this.youtube.getChannels(channelName).subscribe((data)=>{
+      console.log(data)
+      this.channels =data.items;
+    })
   }
 }

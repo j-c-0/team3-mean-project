@@ -4,11 +4,11 @@ const readLine = require('readline');
 const DB_USER = process.env.DB_USER
 const DB_PASS = process.env.DB_PASS
 const DB = 'Loc8r'
-
-let dbURL = `mongodb+srv://${DB_USER}:${DB_PASS}@cluster0.qt3li.mongodb.net/${DB}?retryWrites=true&w=majority`;
-if (process.env.NODE_ENV === 'production') {
-  dbURL = process.env.DB_HOST || process.env.MONGODB_URI;
-}
+let dbURL = 'mongodb://127.0.0.1/Loc8r';
+//let dbURL = `mongodb+srv://${DB_USER}:${DB_PASS}@cluster0.qt3li.mongodb.net/${DB}?retryWrites=true&w=majority`;
+//if (process.env.NODE_ENV === 'production') {
+  //dbURL = process.env.DB_HOST || process.env.MONGODB_URI;
+//}
 
 
 const connect = () => {

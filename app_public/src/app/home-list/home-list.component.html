@@ -14,3 +14,15 @@
         </div>
     </div>
 </div>
+<div class="Youtube" >
+    <h1> Youtube Search</h1>
+    <input #channelName type="text" placeholder="Youtube Channel ..">
+    <br><br>
+    <button (click)="getData()">Search channel</button>
+    <ul *ngFor="let channel of channels">
+      <a target="_blank" href="https://www.youtube.com/channel/{{channel.id.channelId}}">
+      <img width="200" height="200" src="{{channel.snippet.thumbnails.medium.url}}" />
+      </a>
+      {{channel.snippet.channelTitle}}
+    </ul>
+  </div>
