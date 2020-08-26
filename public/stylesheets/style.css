@@ -1,22 +1,18 @@
-@import url("//fonts.googleapis.com/css?family=Lobster|Cabin:400,700");
+@import url("//fonts.googleapis.com/css?family=Roboto|Cabin:400,700");
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Lobster', cursive;
+  font-family: 'Roboto', sans-serif;
 }
 
 legend {
-  font-family: 'Lobster', cursive;
+  font-family: 'Roboto', sans-serif;
 }
 
 .navbar {
-  background-color: #ad1d28;
-  border-color: #911821;
+  background-color: #454e81;
+  border-color: #454e81;
 }
 
-.navbar-light .navbar-brand {
-  font-family: 'Lobster', cursive;
-  color: #fff;
-}
 
 .navbar-light .navbar-toggler {
   color: white;
