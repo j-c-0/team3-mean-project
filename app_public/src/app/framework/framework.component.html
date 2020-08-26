@@ -1,18 +1,23 @@
-<nav class="navbar fixed-top navbar-expand-md navbar-light">
-    <div class="container">
-      <a routerLink="" class="navbar-brand">Loc8r</a>
-        <button type="button" data-target="#navbarMain" class="navbar-toggler">
-          <span class ="navbar-toggler-icon"></span>
-        </button>
-      <div id="navbarMain" class="navbar-collapse collapse">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a routerLink="about" routerLinkActive="active" class="nav-link">About</a>
-          </li>
-        </ul>
-      </div>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <div class="navbar-brand">
+      <a routerLink="">
+        <img src="../../assets/logo/Loc8r.png" alt="Loc8r logo">
+      </a>
     </div>
-  </nav>
+    <div id="navbarMain" class="navbar-collapse collapse">
+      <span class="nav-item">
+          <a routerLink="about" routerLinkActive="active" class="nav-link">About</a>
+      </span>
+    </div>
+    <span class="nav-spacer"></span>
+    <button mat-icon-button class="example-icon" aria-label="icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+
   <div class="container content">
     <br/>
     <br/>
@@ -20,9 +25,9 @@
     <router-outlet></router-outlet>
     <footer>
       <div class="row">
-        <div class="col-12">
+        <mat-grid-list cols="12">
           <small>&copy; Getting Mean - Simon Holmes | Clive Harber 2018</small>
-        </div>
+        </mat-grid-list>
       </div>
     </footer>
   </div>

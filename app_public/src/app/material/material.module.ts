@@ -1,7 +1,16 @@
 import { NgModule } from '@angular/core';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon'; 
+import {MatCardModule} from '@angular/material/card';
+import {MatChipsModule} from '@angular/material/chips';
 
 const MaterialComponents = [
-  //add material components here
+  MatGridListModule,
+  MatToolbarModule,
+  MatIconModule,
+  MatCardModule,
+  MatChipsModule
 ];
 
 

@@ -1,8 +1,10 @@
 
 <app-page-header [content]="pageContent.header"></app-page-header>
-<div class="row">
-  <div class="col-12 col-md-8"> 
+<mat-grid-list cols="5" rowHeight="2:1">
+  <mat-grid-tile colspan="3" rowspan="2">
     <app-home-list></app-home-list>
-  </div>
-  <app-sidebar class="col-12 col-md-4" [content]="pageContent.sidebar"></app-sidebar>
-</div>  
+  </mat-grid-tile>
+  <mat-grid-tile colspan="2" rowspan="2">
+    <app-sidebar [content]="pageContent.sidebar"></app-sidebar>
+  </mat-grid-tile>
+</mat-grid-list>
