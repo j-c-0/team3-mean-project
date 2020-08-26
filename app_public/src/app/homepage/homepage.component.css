@@ -1,3 +1,22 @@
+.home-list {
+    object-fit: contain;
+}
+
 mat-grid-tile {
     background: lightblue;
   }
+
+form {
+    max-width: 450px;
+  }
+div {
+      position: relative;
+    }
+  
+label {
+        opacity: 0.3;
+        position: absolute;
+        top: 22px;
+        left: 20px;
+      }
+ 

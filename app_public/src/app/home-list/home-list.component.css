@@ -1,0 +1,12 @@
+.distance {
+    max-width: 100px;
+    max-height: 50px;
+}
+.facilities-list{
+    margin: auto;
+    padding: 20px;
+    display: table;
+}
+.facilities{
+    display: inline;
+}

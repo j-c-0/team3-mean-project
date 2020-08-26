@@ -5,9 +5,6 @@ h1, h2, h3, h4, h5, h6 {
   color: black;
 }
 
-legend {
-  font-family: 'Lobster', cursive;
-}
 
 .nav-spacer {
   flex: 1 1 auto;
@@ -30,22 +27,18 @@ legend {
 }
 
 .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
-  color: white;
+  color: gray;
 }
 
 .card {
-  color: rgb(53, 49, 49);
   padding: 1rem;
-  max-width: 400px;
+  width: 500px;
+  margin: 10px;
+  border-block-color: black;
 }
 
 .mat-card-title a {
   color: black;
-}
-
-mat-chip {
-  height: 75px;
-  width: 75px;
 }
 
 .banner {
@@ -103,5 +96,5 @@ a {
 }
 
 a:hover {
-  color:#fff
+  color:rgb(102, 102, 102)
 }
