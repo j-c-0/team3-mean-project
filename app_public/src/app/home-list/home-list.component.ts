@@ -1,7 +1,8 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Loc8rDataService } from "../loc8r-data.service";
 import { GeolocationService } from "../geolocation.service";
-import {YoutubeService} from '../youtube.service';
+import { YoutubeService } from '../youtube.service';
+import { FilterPipe } from '../filter.pipe';
 import { Location } from '../location';
 
 @Component({
@@ -12,15 +13,16 @@ import { Location } from '../location';
 export class HomeListComponent implements OnInit {
 
   constructor(
-    private loc8rDataService: Loc8rDataService,
     private geolocationService: GeolocationService,
     private youtube:YoutubeService 
   ) { }
 
   public locations: Location[];
 
+  public searchText: string;
+ 
   public message: string;
-
+  
   channels:any;
   @ViewChild('channelName')ChannelName:ElementRef;
 
