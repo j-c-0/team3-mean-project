@@ -14,6 +14,7 @@ export class HomeListComponent implements OnInit {
 
   constructor(
     private geolocationService: GeolocationService,
+    private loc8rDataService: Loc8rDataService,
     private youtube:YoutubeService 
   ) { }
 
