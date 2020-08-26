@@ -1,0 +1,9 @@
+.Youtube{
+    display: block;
+    border-radius: 10px;
+    width: 730px;
+    height: 600px;
+    background: linear-gradient(180deg, rgb(42, 217, 240) 0%, rgb(3, 2, 31) 75%, rgb(8, 10, 63) 100%);
+    color: white;;
+    font-family: 'Times New Roman', Times, serif;
+}
