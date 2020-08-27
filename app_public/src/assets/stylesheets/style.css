@@ -36,9 +36,10 @@ legend {
 .location {
   border-color: #2d2d2f;
   margin-bottom: 0.5rem;
-  box-shadow: rgba(65, 72, 83, 0.14) 0px 1px 1px 0px, 
+  box-shadow: 17px 10px 21px 1px rgba(0,0,0,1);
+  /* box-shadow: rgba(65, 72, 83, 0.14) 0px 1px 1px 0px, 
               rgba(65, 72, 83, 0.12) 0px 2px 1px -1px, 
-              rgba(65, 72, 83, 0.2) 0px 1px 3px 0px;
+              rgba(65, 72, 83, 0.2) 0px 1px 3px 0px; */
 }
 
 .banner {

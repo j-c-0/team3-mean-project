@@ -3,9 +3,10 @@
     border-radius: 10px;
     width: 290px;
     height: 220px;
-    background: linear-gradient(180deg, rgb(42, 217, 240) 0%, rgb(3, 2, 31) 75%, rgb(8, 10, 63) 100%);
-    color: white;;
-    font-family: 'Times New Roman', Times, serif;
+    background: linear-gradient(180deg, #1d1d1c 0%, #454e81 100%);
+    color: inherit;
+    font-family: inherit;
+    box-shadow: 17px 10px 21px 1px rgba(0,0,0,1);
 }
  
 .weatherWidgetRow{
