@@ -1,22 +1,18 @@
-@import url("//fonts.googleapis.com/css?family=Lobster|Cabin:400,700");
+@import url("//fonts.googleapis.com/css?family=Roboto:400,700");
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Lobster', cursive;
+  font-family: 'Roboto', sans-serif;
 }
 
 legend {
-  font-family: 'Lobster', cursive;
+  font-family: 'Roboto', sans-serif;
 }
 
 .navbar {
-  background-color: #ad1d28;
-  border-color: #911821;
+  background-color: #454e81;
+  border-color: #454e81;
 }
 
-.navbar-light .navbar-brand {
-  font-family: 'Lobster', cursive;
-  color: #fff;
-}
 
 .navbar-light .navbar-toggler {
   color: white;
@@ -32,13 +28,17 @@ legend {
 }
 
 .card {
-  background-color: #469ea8;
+  background-color: #1d1d1c;
+  border-color: #646765;
   padding: 1rem;
 }
 
-.card-primary {
-  border-color: #a2ced3;
+.location {
+  border-color: #2d2d2f;
   margin-bottom: 0.5rem;
+  box-shadow: rgba(65, 72, 83, 0.14) 0px 1px 1px 0px, 
+              rgba(65, 72, 83, 0.12) 0px 2px 1px -1px, 
+              rgba(65, 72, 83, 0.2) 0px 1px 3px 0px;
 }
 
 .banner {
@@ -88,6 +88,11 @@ h1 small {
   margin-right: 2px;
 }
 
+.facilities span.badge-secondary {
+  background-color: #de5c82;
+  color: #2c2c2c;
+}
+
 p {
   margin-bottom: 0.65rem;
 }
@@ -97,11 +102,11 @@ a {
 }
 
 a:hover {
-  color:#fff
+  color:rgb(102, 102, 102)
 }
 
 body {
-  font-family: "Cabin", Arial, sans-serif;
-  color: #fff;
-  background-color: #108a93;
+  font-family: "Roboto", Arial, sans-serif;
+  color: #cbc5bd;
+  background-color: #2c2c2c;
 }
