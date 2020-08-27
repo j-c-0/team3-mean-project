@@ -17,3 +17,24 @@ h2:hover{
 .ytsearchbar {
     align-self: start;
 }
+
+.cnt-block:hover {
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    border: 0;
+}
+
+.cnt-block{ 
+    float:left; 
+    width:100%; 
+    background: #1d1d1c; 
+    padding:30px 20px; 
+    text-align:center; 
+    border:2px solid #d5d5d5;
+    margin: 0 0 28px;
+ }
+
+ .cnt-block img{ 
+    width:250px; 
+    height:250px; 
+    border-radius:5%; 
+ }
