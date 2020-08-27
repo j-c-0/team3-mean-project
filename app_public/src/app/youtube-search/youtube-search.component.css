@@ -1,0 +1,19 @@
+h1{
+    animation-name: blinker;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+h2:hover{
+    animation-play-state: paused;
+    cursor:pointer;
+}
+@keyframes blinker{
+    0%{opacity: 1.0;}
+    50%{opacity: 0.0;}
+    100%{opacity: 1.0;}
+}
+
+.ytsearchbar {
+    align-self: start;
+}

@@ -18,7 +18,8 @@ import { DetailsPageComponent } from './details-page/details-page.component';
 import { LocationDetailsComponent } from './location-details/location-details.component';
 import { MostRecentFirstPipe } from './most-recent-first.pipe';
 import { FilterPipe } from './filter.pipe';
-import { WeatherComponent } from './weather/weather.component'
+import { WeatherComponent } from './weather/weather.component';
+import { YoutubeSearchComponent } from './youtube-search/youtube-search.component'
 @NgModule({
   declarations: [
     FrameworkComponent,
@@ -34,7 +35,8 @@ import { WeatherComponent } from './weather/weather.component'
     LocationDetailsComponent,
     MostRecentFirstPipe,
     FilterPipe,
-    WeatherComponent
+    WeatherComponent,
+    YoutubeSearchComponent
   ],
   imports: [
     BrowserModule,
