@@ -24,6 +24,8 @@ export class LocationDetailsComponent implements OnInit {
 
   constructor(private appDataservice: Loc8rDataService) { }
 
+  
+
   ngOnInit(): void {
   }
 
@@ -56,4 +58,5 @@ export class LocationDetailsComponent implements OnInit {
     this.newReview.rating = 5;
     this.newReview.reviewText = '';
   }
+
 }

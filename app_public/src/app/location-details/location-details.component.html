@@ -2,7 +2,7 @@
     <div class="col-12 col-md-6">
         <app-rating-stars [rating]="location.rating"></app-rating-stars>
           <p>{{ location.address }}</p>
-          <div class="card card-primary">
+          <div class="card card-box">
             <div class="card-block">
               <h2 class="card-title">Opening hours</h2>
               <p class="card-text" *ngFor="let time of location.openingTimes" [ngSwitch]="time.closed">
@@ -12,28 +12,30 @@
               </p>
             </div>
           </div>
-          <div class="card card-primary">
+          <div class="card card-box">
             <div class="card-block">
               <h2 class="card-title">Facilities</h2>
-              <span *ngFor="let facility of location.facilities" class="badge badge-warning">
-                <i class="fa fa-check"></i>
-                {{facility}}
-              </span>
+              <div class="facilities">
+                <span *ngFor="let facility of location.facilities" class="badge badge-secondary">
+                  <i class="fa fa-check"></i>
+                  {{facility}}
+                </span>
+              </div>
             </div>
           </div>
         </div>
         <div class="col-12 col-md-6 location-map">
-          <div class="card card-primary">
+          <div class="card card-box">
             <div class="card-block">
               <h2 class="card-title">Location map</h2>
-              <img src="https://maps.googleapis.com/maps/api/staticmap?center={{location.coords[1]}},{{location.coords[0]}}&zoom=17&size=400x350&sensor=false&markers={{location.coords[1]}},{{location.coords[0]}}&key=AIzaSyAgoFuWKCYWX1UQ51OrspggXncMw5Pea9A&scale=2" class="img-fluid rounded"/>
+              <img id="map" src="https://maps.googleapis.com/maps/api/staticmap?center={{location.coords[1]}},{{location.coords[0]}}&zoom=17&size=400x350&sensor=false&markers={{location.coords[1]}},{{location.coords[0]}}&key=AIzaSyAgoFuWKCYWX1UQ51OrspggXncMw5Pea9A&scale=2" class="img-fluid rounded"/>
             </div>
           </div>
         </div>
       </div>
       <div class="row">
         <div class="col-12">
-          <div class="card card-primary review-card">
+          <div class="card card-box review-card">
             <div class="card-block">
               <button (click)="formVisible=true" class="btn btn-primary float-right">Add review</button>
               <h2 class="card-title">Customer reviews</h2>
@@ -71,17 +73,17 @@
                   <div class="form-group row">
                     <div class="col-12">
                       <button type="submit" class="btn btn-primary float-right" style="margin-left:15px">Submit review</button>
-                      <button (click)="formVisible=false" type="button" class="btn btn-default float-right">Cancel</button>
+                      <button (click)="formVisible=false" type="button" class="btn btn-danger float-right">Cancel</button>
                     </div>
                   </div>
                   <hr>
                 </form>
               </div>
               <div *ngFor="let review of location.reviews | mostRecentFirst" class="row review">
-                <div class="col-12 no-gutters review-header">
+                <div class="col-12 no-gutters review-header card-box">
                   <app-rating-stars [rating]="review.rating"></app-rating-stars>
-                  <span class="reviewAuthor">{{ review.author }}</span>
-                  <small class="reviewTimestamp">{{ review.createdOn | date : 'd MMMM yyyy'}}</small>
+                  <span class="reviewAuthor">&nbsp; {{ review.author }}</span>
+                  <small class="reviewTimestamp">&nbsp; {{ review.createdOn | date : 'd MMMM yyyy'}}</small>
                 </div>
                 <div class="col-12">
                   <p [innerHTML]="review.reviewText"></p>

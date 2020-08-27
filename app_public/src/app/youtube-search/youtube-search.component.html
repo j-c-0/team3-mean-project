@@ -3,7 +3,7 @@
     <h1> Youtube Search</h1>
     <div class="ytsearchbar">
         <input #channelName type="text" placeholder="Youtube Channel ..">
-        <button (click)="getData()">Search channel</button>
+        <button (click)="getData()" class="btn-primary">Search channel</button>
     </div>
     <br><br>
     <div class="card" *ngFor="let channel of channels">

@@ -4,7 +4,7 @@
 </div>
 <br>
 <div class="error">{{message}}</div>
-<div class="card location" *ngFor="let location of (locations | filter:searchText)">
+<div class="card card-box" *ngFor="let location of (locations | filter:searchText)">
     <div class="card-block">
         <h4>
             <a routerLink="/location/{{location._id}}">{{location.name}}</a>
